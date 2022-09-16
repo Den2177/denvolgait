@@ -1,5 +1,5 @@
 #Установка
-1. ```git clone https://github.com/Den2177/volgait.git```
+1. ```git clone https://github.com/Den2177/denvolgait.git```
 2. ``` скопировать .env.example в .env файл ```
 3. ``` Установить имя, пароль от базы данных ```
 4.
