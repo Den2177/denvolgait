@@ -13,4 +13,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/getProducts/{productId}',[\App\Http\Controllers\ProductController::class, 'store']);
+Route::get('/getProducts/{productId}',[\App\Http\Controllers\ProductController::class, 'show']);
