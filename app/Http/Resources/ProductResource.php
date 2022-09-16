@@ -25,7 +25,14 @@ class ProductResource extends JsonResource
 
         foreach ($productFeatures as $feature) {
             $key = trim(explode(": ", $feature)[0]);
-            $value = trim(explode(": ", $feature)[1]);
+            $value = explode(":", $feature);
+
+            if (empty($value[1])) {
+                $value = '';
+            } else {
+                $value = trim($value[1]);
+            }
+
             $value = preg_replace("/[A-Z]\[]/", '', $value);
             $edittedFeatures[$key] = $value;
         }

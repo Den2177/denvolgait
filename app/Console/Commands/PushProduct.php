@@ -68,6 +68,12 @@ class PushProduct extends Command
             ->each(function (LazyCollection $chunk) {
                 $records = $chunk->map(function ($row) {
 
+                    for ($i = 0; $i < 16; $i++) {
+                        if (empty($row[$i])) {
+                            $row[$i] = '';
+                        }
+                    }
+
                     foreach ($row as &$item) {
                         $item = trim($item, '"');
                     }
